@@ -8,7 +8,7 @@ import org.springframework.data.solr.core.mapping.Indexed;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
 @SuppressWarnings("serial")
-@SolrDocument(collection="mldncore")	// 与Solr地址混合在一起就是core的路径
+@SolrDocument(collection="mldncloud")	// 与Solr地址混合在一起就是collection的名称
 public class Goods implements Serializable {
 	@Id
 	@Indexed(name="id")
