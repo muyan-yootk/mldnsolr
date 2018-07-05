@@ -9,12 +9,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
+import org.springframework.data.solr.repository.config.EnableSolrRepositories;
 
 import cn.mldn.util.solr.AuthRequestInterceptor; 
 
 @Configuration
 @Scope("prototype")
 @PropertySource("classpath:config/solr.properties")
+@EnableSolrRepositories(basePackages={"cn.mldn.dao"}) 
 public class SolrConfig {
 	@Value("${solr.host.url}")
 	private String solrHostUrl ;

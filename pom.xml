@@ -57,9 +57,16 @@
 		<oltu.version>1.0.2</oltu.version>
 		<httpclient.version>4.5.5</httpclient.version>
 		<solr-solrj.version>7.3.1</solr-solrj.version>
+		<spring-data-solr.version>3.0.8.RELEASE</spring-data-solr.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-solr</artifactId>
+				<version>${spring-data-solr.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.apache.solr</groupId>
 				<artifactId>solr-solrj</artifactId>
