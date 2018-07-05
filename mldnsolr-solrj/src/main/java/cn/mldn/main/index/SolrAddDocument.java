@@ -2,7 +2,7 @@ package cn.mldn.main.index;
 
 import java.util.Date;
 
-import org.apache.solr.client.solrj.impl.HttpSolrClient;
+import org.apache.solr.client.solrj.impl.CloudSolrClient;
 import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrInputDocument;
 
@@ -11,7 +11,7 @@ import cn.mldn.util.solr.SolrConnectionUtil;
 public class SolrAddDocument {
 
 	public static void main(String[] args) throws Exception { 
-		HttpSolrClient solrClient = SolrConnectionUtil.getClient() ;
+		CloudSolrClient solrClient = SolrConnectionUtil.getClient() ;
 		SolrInputDocument document = new SolrInputDocument() ; // 创建一个新的索引对象
 		document.addField("id", "99");
 		document.addField("solr_s_name", "小强王中王火腿");
@@ -25,6 +25,6 @@ public class SolrAddDocument {
 		UpdateResponse response = solrClient.add(document) ;
 		System.out.println("花费时间：" + response.getElapsedTime());
 		solrClient.commit() ;
-		solrClient.close(); 
+		solrClient.close();  
 	}
 }
