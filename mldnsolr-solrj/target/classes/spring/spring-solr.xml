@@ -8,6 +8,4 @@
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd">
 	<context:component-scan base-package="cn.mldn"/>
 	<context:property-placeholder location="classpath:config/*.properties"/>
-	<task:annotation-driven/>
-	<task:scheduler id="taskSchedulePool" pool-size="2"/>
 </beans>
